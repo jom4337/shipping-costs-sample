@@ -35,7 +35,7 @@ def makeWebhookResult(req):
     zone = parameters.get("shipping-zone")
 
     cost = {'Europe':100, 'North America':200, 'South America':300, 'Asia':400, 'Africa':500,
-           'IE4D':'Island Echos 4D', 'IE2A':'Island Echos 2A'
+           'IE4D': 4, 'IE2A':'Island Echos 2A'
            
            }
 
