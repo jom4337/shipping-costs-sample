@@ -40,7 +40,7 @@ def makeWebhookResult(req):
 
     unit=str(cost[zone])
     unitwifi=str(wifi[zone])
-    speech="Welcome to "+unitwifi+" ."
+    speech="Welcome to "+unit+" ."
     
     
     print("Response:")
@@ -51,7 +51,7 @@ def makeWebhookResult(req):
         "displayText": speech,
         #"data": {},
         # "contextOut": [],
-        "contextOut":[{"name":"unit-detail","lifespan":5,"parameters":{"name":"Island Echo 4 D","wifi":"123456","host":"irina"}}],
+        "contextOut":[{"name":"unit-detail","lifespan":5,"parameters":{"name":"Island Echo 4 D","wifi":unitwifi,"host":"irina"}}],
         "source": "apiai-onlinestore-shipping"
     }
 
