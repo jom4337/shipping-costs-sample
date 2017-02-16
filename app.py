@@ -30,7 +30,11 @@ def webhook():
 
 cost = {'ie4d':'Island Echo 4 D', 'ie2a':'Island Echo 2 A' }
 unit=str(cost[zone])
-
+if unit="Island Echo 4 D":
+    wifi="123456"
+else:
+    wifi="55667788"
+    
 def makeWebhookResult(req):
     if req.get("result").get("action") != "unit.name":
         return {}
@@ -48,10 +52,7 @@ def makeWebhookResult(req):
         "displayText": speech,
         #"data": {},
         # "contextOut": [],
-if unit="Island Echo 4 D":
-        "contextOut":[{"name":"unit-detail","lifespan":5,"parameters":{"name":"Island Echo 4 D","wifi":"123455","host":"irina"}}]
-else    :    
-        "contextOut": []
+        "contextOut":[{"name":"unit-detail","lifespan":5,"parameters":{"name":"Island Echo 4 D","wifi":"123455","host":"irina"}}].
         "source": "apiai-onlinestore-shipping"
     }
 
