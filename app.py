@@ -37,10 +37,8 @@ def makeWebhookResult(req):
     result = req.get("result")
     parameters = result.get("parameters")
     zone = parameters.get("unit-name")
-
-
     
-    speech="Welcome to " + str(cost[zone]) + ". " +unit
+    speech="Welcome to " +unit+ " ."
 
     print("Response:")
     print(speech)
@@ -50,7 +48,12 @@ def makeWebhookResult(req):
         "displayText": speech,
         #"data": {},
         # "contextOut": [],
+if unit="Island Echo 4 D":
         "contextOut":[{"name":"unit-detail","lifespan":5,"parameters":{"name":"Island Echo 4 D","wifi":"123455","host":"irina"}}],
+elif unit="Island Echo 2 A":
+        "contextOut":[{"name":"unit-detail","lifespan":5,"parameters":{"name":"Island Echo 2 A","wifi":"55667788","host":"juan"}}],
+else    :    
+        "contextOut": [],  
         "source": "apiai-onlinestore-shipping"
     }
 
