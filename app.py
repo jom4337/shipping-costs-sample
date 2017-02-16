@@ -29,6 +29,7 @@ def webhook():
 
 
 cost = {'ie4d':'Island Echo 4 D', 'ie2a':'Island Echo 2 A' }
+detail = {'ie4d':'123456', 'ie2a':'78910' }
 
     
 def makeWebhookResult(req):
@@ -39,12 +40,9 @@ def makeWebhookResult(req):
     zone = parameters.get("unit-name")
 
     unit=str(cost[zone])
+    wifi=str(detail[zone])
     speech="Welcome to "+unit+" ."
     
-    if unit="Island Echo 4 D":
-        wifi="12345"
-    else:
-        wifi="5"
     
     print("Response:")
     print(speech)
