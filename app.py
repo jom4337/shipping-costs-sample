@@ -29,7 +29,7 @@ def webhook():
 
 
 cost = {'ie4d':'Island Echo 4 D', 'ie2a':'Island Echo 2 A' }
-
+costs = {'ie4d':'Island Echo 4 D', 'ie2a':'Island Echo 2 A' }
     
 def makeWebhookResult(req):
     if req.get("result").get("action") != "unit.name":
