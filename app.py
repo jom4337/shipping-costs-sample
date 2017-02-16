@@ -29,8 +29,8 @@ def webhook():
 
 
 cost =     {'ie4d':'Island Echo 4 D', 'ie2a':'Island Echo 2 A' }
-wifi =     {'ie4d':'Connect to any network that starts with IES',
-            'ie2a':'Connect to any network that starts with IES'}
+wifi =     {'ie4d':'Connect to any network that starts with IES4',
+            'ie2a':'Connect to any network that starts with IES2'}
 wifipass= {'ie4d':'8779121550',           'ie2a':'8779121550'}
 #checkout= {'ie4d':'1',           'ie2a':'67890'}
 #checkoutt= {'ie4d':'Checkout time for this home is 10:00 AM',
@@ -60,8 +60,10 @@ def makeWebhookResult(req):
     parameters = result.get("parameters")
     zone = parameters.get("unit-name")
 
-    unit=str(cost[zone])
-    unitwifi=str(wifi[zone])
+    unit        =str(cost[zone])
+    unitwifipass=str(wifipass[zone])
+    unitwifi    =str(wifi[zone])
+    
     speech="Welcome to "+unit+" ."
     
     
@@ -75,7 +77,7 @@ def makeWebhookResult(req):
         # "contextOut": [],
         "contextOut":[{"name":"unit-detail","lifespan":5,"parameters":{"name":unit,
                                                                        "wifi":unitwifi,
-                                                                       "wifipass":wifipass
+                                                                       "wifipass":unitwifipass
                                                                       }}],
         "source": "apiai-onlinestore-shipping"
     }
