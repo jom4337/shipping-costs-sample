@@ -29,7 +29,6 @@ def webhook():
 
 
 cost = {'ie4d':'Island Echo 4 D', 'ie2a':'Island Echo 2 A' }
-detail = {'ie4d':'123456', 'ie2a':'78910' }
 
     
 def makeWebhookResult(req):
