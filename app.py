@@ -28,7 +28,7 @@ def webhook():
     return r
 
 
-
+cost = {'ie4d':'Island Echo 4 D', 'ie2a':'Island Echo 2 A' }
 
     
 def makeWebhookResult(req):
@@ -38,7 +38,6 @@ def makeWebhookResult(req):
     parameters = result.get("parameters")
     zone = parameters.get("unit-name")
     
-    cost = {'ie4d':'Island Echo 4 D', 'ie2a':'Island Echo 2 A' }
     unit=str(cost[zone])
     speech="Welcome to " +unit+ " ."
 
