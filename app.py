@@ -28,29 +28,27 @@ def webhook():
     return r
 
 
-cost =     {'ie4d':'Island Echo 4 D', 'ie2a':'Island Echo 2 A' }
+cost =     {'ie4d':'Island Echo 4 D', 
+            'ie2a':'Island Echo 2 A' }
 wifi =     {'ie4d':'Connect to any network that starts with IES4',
             'ie2a':'Connect to any network that starts with IES2'}
-wifipass= {'ie4d':'8779121550',           'ie2a':'8779121550'}
-#checkout= {'ie4d':'1',           'ie2a':'67890'}
-#checkoutt= {'ie4d':'Checkout time for this home is 10:00 AM',
-#            'ie2a':'Checkout time for this home is 10:00 AM'}
-#address= {'ie4d':'676 Santa Rosa Boulevard, unit 4 D.  Fort walton Beach Fl 32548',           
-#          'ie2a':'676 Santa Rosa Boulevard, unit 4 D.  Fort walton Beach Fl 32548'}
-#host= {'ie4d':'The Host for this home is Irina',           'ie2a':'You can reach your at 850-253-7008'}
-#hostreach= {'ie4d':'You can reach your at 850-253-7008',           'ie2a':'67890'}
+wifipass= {'ie4d':'8779121550',           
+           'ie2a':'8779121550'}
+checkout= {'ie4d':'10:00 AM',           
+           'ie2a':'10:00 AM'}
+checkoutt= {'ie4d':'Checkout time for this home is 10:00 AM',
+            'ie2a':'Checkout time for this home is 10:00 AM'}
+address= {'ie4d':'676 Santa Rosa Boulevard, unit 4 D.  Fort walton Beach Fl 32548',           
+          'ie2a':'676 Santa Rosa Boulevard, unit 4 D.  Fort walton Beach Fl 32548'}
+host= {'ie4d':'The Host for this home is Irina',           
+       'ie2a':'The Host for this home is Irina'}
+hostreach= {'ie4d':'You can reach your at 850-253-7008',           
+            'ie2a':'You can reach your at 850-253-7008'}
 #homeament= {'ie4d':'12345',           'ie2a':'67890'}
 #resortament= {'ie4d':'12345',           'ie2a':'67890'}
 #concierg= {'ie4d':'12345',           'ie2a':'67890'}
 #services= {'ie4d':'12345',           'ie2a':'67890'}
 
-
-#custname1
-#custval1
-#custname2
-#custval2
-#custname3
-#custval3
 
     
 def makeWebhookResult(req):
@@ -61,8 +59,13 @@ def makeWebhookResult(req):
     zone = parameters.get("unit-name")
 
     unit        =str(cost[zone])
-    unitwifipass=str(wifipass[zone])
     unitwifi    =str(wifi[zone])
+    unitwifipass=str(wifipass[zone])
+    unitcheckout=str(checkout[zone])
+    unitcheckoutt=str(checkoutt[zone])
+    unitaddress=str(address[zone])
+    unithost=str(host[zone])
+    unithostreach=str(hostreach[zone])
     
     speech="Welcome to "+unit+" ."
     
