@@ -29,7 +29,20 @@ def webhook():
 
 
 cost  = {'ie4d':'Island Echo 4 D', 'ie2a':'Island Echo 2 A' }
-wifi = {'ie4d':'12345','ie2a':'67890'}
+wifi =  {'ie4d':'12345',           'ie2a':'67890'}
+#wifipass =
+#checkout
+#checkouttime
+#address
+#host
+#hostreach
+#custname1
+#custval1
+#custname2
+#custval2
+#custname3
+#custval3
+
     
 def makeWebhookResult(req):
     if req.get("result").get("action") != "unit.name":
