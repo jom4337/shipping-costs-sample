@@ -49,11 +49,9 @@ def makeWebhookResult(req):
         #"data": {},
         # "contextOut": [],
 if unit="Island Echo 4 D":
-        "contextOut":[{"name":"unit-detail","lifespan":5,"parameters":{"name":"Island Echo 4 D","wifi":"123455","host":"irina"}}],
-elif unit="Island Echo 2 A":
-        "contextOut":[{"name":"unit-detail","lifespan":5,"parameters":{"name":"Island Echo 2 A","wifi":"55667788","host":"juan"}}],
+        "contextOut":[{"name":"unit-detail","lifespan":5,"parameters":{"name":"Island Echo 4 D","wifi":"123455","host":"irina"}}]
 else    :    
-        "contextOut": [],  
+        "contextOut": []
         "source": "apiai-onlinestore-shipping"
     }
 
