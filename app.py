@@ -40,7 +40,7 @@ def makeWebhookResult(req):
 
     unit=str(cost[zone])
     unitwifi=str(wifi[zone])
-    speech="Welcome to "+unit+" ."
+    speech="Welcome to "+unitwifi+" ."
     
     
     print("Response:")
