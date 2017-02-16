@@ -36,14 +36,14 @@ def makeWebhookResult(req):
 
     cost = {'ie4d':'Island Echo 4 D', 'ie2a':'Island Echo 2 A' }
 
-    speech = "Welcome to " + str(cost[zone]) + "."
+    
 
     print("Response:")
     print(speech)
 
     return {
-        "speech": speech,
-        "displayText": speech,
+        "speech":"Welcome to " + str(cost[zone]) + ".",
+        "displayText":"Welcome to " + str(cost[zone]) + ".",
         #"data": {},
         # "contextOut": [],
         "contextOut":[{"name":"unit-detail","lifespan":5,"parameters":{"name":"Island Echo 4 D","wifi":"123455","host":"irina"}}],
