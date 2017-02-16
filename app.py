@@ -28,8 +28,7 @@ def webhook():
     return r
 
 
-cost = {'ie4d':'Island Echo 4 D', 'ie2a':'Island Echo 2 A' }
-unit=str(cost[zone])
+
 
     
 def makeWebhookResult(req):
@@ -39,6 +38,8 @@ def makeWebhookResult(req):
     parameters = result.get("parameters")
     zone = parameters.get("unit-name")
     
+    cost = {'ie4d':'Island Echo 4 D', 'ie2a':'Island Echo 2 A' }
+    unit=str(cost[zone])
     speech="Welcome to " +unit+ " ."
 
     print("Response:")
@@ -49,7 +50,7 @@ def makeWebhookResult(req):
         "displayText": speech,
         #"data": {},
         # "contextOut": [],
-        "contextOut":[{"name":"unit-detail","lifespan":5,"parameters":{"name":"Island Echo 4 D","wifi":"123455","host":"irina"}}],
+        #"contextOut":[{"name":"unit-detail","lifespan":5,"parameters":{"name":"Island Echo 4 D","wifi":"123455","host":"irina"}}],
         "source": "apiai-onlinestore-shipping"
     }
 
