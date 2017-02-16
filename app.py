@@ -41,8 +41,11 @@ def makeWebhookResult(req):
     unit=str(cost[zone])
     speech="Welcome to "+unit+" ."
     
-    wifi="12345"
-
+    if unit='Island Echo 4 D';
+        wifi="12345"
+    else:
+        wifi="5"
+    
     print("Response:")
     print(speech)
 
