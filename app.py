@@ -80,9 +80,14 @@ def makeWebhookResult(req):
         # "contextOut": [],
         "contextOut":[{"name":"unit-detail","lifespan":5,"parameters":{"name":unit,
                                                                        "wifi":unitwifi,
-                                                                       "wifipass":unitwifipass
+                                                                       "wifipass":unitwifipass,
+                                                                       "checkout":unitcheckout,
+                                                                       "checkoutt":unitcheckoutt,
+                                                                       "address":unitaddress,
+                                                                       "host":unithost,
+                                                                       "hostreach":unithostreach
                                                                       }}],
-        "source": "apiai-onlinestore-shipping"
+        "source": "lodgekit-stay"
     }
 
 
