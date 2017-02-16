@@ -30,10 +30,7 @@ def webhook():
 
 cost = {'ie4d':'Island Echo 4 D', 'ie2a':'Island Echo 2 A' }
 unit=str(cost[zone])
-if unit="Island Echo 4 D":
-    wifi="123456"
-else:
-    wifi="55667788"
+
     
 def makeWebhookResult(req):
     if req.get("result").get("action") != "unit.name":
