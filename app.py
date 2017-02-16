@@ -38,8 +38,8 @@ def makeWebhookResult(req):
     parameters = result.get("parameters")
     zone = parameters.get("unit-name")
 
-    unit=str(cost[zone])
-    speech="Welcome to " +unit+ " ."
+   
+    speech="Welcome to "+str(cost[zone])+" ."
 
     print("Response:")
     print(speech)
