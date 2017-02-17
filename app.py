@@ -67,7 +67,7 @@ def makeWebhookResult(req):
     unithost=str(host[zone])
     unithostreach=str(hostreach[zone])
     
-    speech="Welcome to "+unit+" ."+"I am Leelu, how can I help.  For example. say - wifi help, contact host, addreess"
+    speech="Welcome to "+unit+" ."+"I am Leelu, how can I help.  For example. say - wifi help or contact host or address"
     
     
     print("Response:")
