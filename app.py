@@ -32,8 +32,8 @@ cost =     {'ie4d':'Island Echo 4 D',
             'ie2a':'Island Echo 2 A' }
 wifi =     {'ie4d':'Connect to any network that starts with IES4',
             'ie2a':'Connect to any network that starts with IES2'}
-wifipass= {'ie4d':'8 7 7 9 1 2 1 5 5 0',           
-           'ie2a':'8 7 7 9 1 2 1 5 5 0'}
+wifipass= {'ie4d':'8779121550',           
+           'ie2a':'8779121550'}
 checkout= {'ie4d':'10:00 AM',           
            'ie2a':'10:00 AM'}
 checkoutt= {'ie4d':'Checkout time for this home is 10:00 AM',
