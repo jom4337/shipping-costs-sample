@@ -42,8 +42,8 @@ address= {'ie4d':'676 Santa Rosa Boulevard, unit 4 D.  Fort walton Beach Fl 3254
           'ie2a':'676 Santa Rosa Boulevard, unit 4 D.  Fort walton Beach Fl 32548'}
 host= {'ie4d':'The Host for this home is Irina',           
        'ie2a':'The Host for this home is Irina'}
-hostreach= {'ie4d':'You can reach your host at 850-253-7008',           
-            'ie2a':'You can reach your host at 850-253-7008'}
+hostreach= {'ie4d':'You can reach your Host at 850-253-7008',           
+            'ie2a':'You can reach your Host at 850-253-7008'}
 #homeament= {'ie4d':'12345',           'ie2a':'67890'}
 #resortament= {'ie4d':'12345',           'ie2a':'67890'}
 #concierg= {'ie4d':'12345',           'ie2a':'67890'}
