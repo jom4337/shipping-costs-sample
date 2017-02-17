@@ -34,7 +34,7 @@ wifi =     {'ie4d':'Connect to any network that starts with IES4',
             'ie2a':'Connect to any network that starts with IES2'}
 wifipass= {'ie4d':'8779121550',           
            'ie2a':'8779121550'}
-checkout= {'ie4d':'Leave dirty linens in front of bathroom sink - Load and start dishwasher - Empty trash cans - Store sand free beach chairs and toys on balcony - Close and lock balcony door - Turn lights off - Make sure front door is securely latched upon exit -  Please try to leave our place TIDY.  Thank you!  And have a safe trip home! ',           
+checkout= {'ie4d':'Leave dirty linens in front of bathroom sink - Load and start dishwasher. - Empty trash cans. - Store sand free beach chairs and toys on balcony. - Close and lock balcony door. - Turn lights off. - Make sure front door is securely latched upon exit. -  Please try to leave our place TIDY.  Thank you!  And have a safe trip home! ',           
            'ie2a':'10:00 AM'}
 checkoutt= {'ie4d':'Checkout time for this home is 10:00 AM',
             'ie2a':'Checkout time for this home is 10:00 AM'}
