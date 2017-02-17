@@ -44,8 +44,10 @@ host= {'ie4d':'The Host for this home is Irina',
        'ie2a':'The Host for this home is Irina'}
 hostreach= {'ie4d':'You can reach your Host at 850-253-7008',           
             'ie2a':'You can reach your Host at 850-253-7008'}
-#homeament= {'ie4d':'12345',           'ie2a':'67890'}
-#resortament= {'ie4d':'12345',           'ie2a':'67890'}
+#homeament= {'ie4d':'Your host has not shared that informtion with me yet.',
+#            'ie2a':'Wifi, HBO, Beach Chairs and Umbrella, Beach Toys'}
+#resortament= {'ie4d':'Beachront Pool, Outdoor Grills, DVD Rentals, Beach Rentals, Beach Volleyball, Fitness Center, Tennis Court, Free Onsite Parking',           
+#             'ie2a':'67890'}
 #concierg= {'ie4d':'12345',           'ie2a':'67890'}
 #services= {'ie4d':'12345',           'ie2a':'67890'}
 
@@ -66,6 +68,8 @@ def makeWebhookResult(req):
     unitaddress=str(address[zone])
     unithost=str(host[zone])
     unithostreach=str(hostreach[zone])
+    unithomeament=str(homeament[zone])
+    unitresortament=str(resortament[zone])
     
     speech="Welcome to "+unit+" ."+"  I am Leelu, how can I help.  For example. say - wifi, or contact host, or address, or checkout"
     
@@ -86,6 +90,8 @@ def makeWebhookResult(req):
                                                                        "address":unitaddress,
                                                                        "host":unithost,
                                                                        "hostreach":unithostreach
+                                                                       "homeament":unithomeament,
+                                                                       "resortament":unitresortament
                                                                       }}],
         "source": "lodgekit-stay"
     }
