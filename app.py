@@ -96,7 +96,8 @@ if req.get("result").get("action") == "unit.name":
                                                                       }}],
         "source": "lodgekit-stay"
     }
-
+else:
+    return {}
     
 
 if __name__ == '__main__':
