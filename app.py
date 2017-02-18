@@ -70,9 +70,9 @@ homeament5 =     {'ie4d':'',
 #------------Home Ameneties more Detail----------------------#
 morehomeament =     {'ie4d-wifi':'Availble in the unit and throughout the building', 
                      'ie4d-hbo':'Avaialble in both the licing room and the bedroom', 
-                     'ie4d-beach chairs':'Beach Chairs & Umbrella are stored on the balcony.  They are there for all Guests to use', 
-                     'ie4d-beach toys':'Stored on the balcony in a plastic bin.  They are there for all Guests to use',
-                     'ie2a-beach toys':'Stored on the balcony '
+                     'ie4d-chairs':'Beach Chairs & Umbrella are stored on the balcony.  They are there for all Guests to use', 
+                     'ie4d-toys':'Stored on the balcony in a plastic bin.  They are there for all Guests to use',
+                     'ie2a-toys':'Stored on the balcony '
                      }
 #------------Home Ameneties more Detail----------------------#
 
