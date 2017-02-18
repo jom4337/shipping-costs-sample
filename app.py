@@ -85,13 +85,7 @@ def makeWebhookResult(req):
         
         speech="Welcome" 
         
-        return {
-        "speech": speech,
-        "displayText": speech,
-        #"data": {},
-        # "contextOut": [],
-        "source": "lodgekit-stay"
-        }
+
   #-----------------unit.name------------------------#      
     if req.get("result").get("action") == "unit.name":
         
