@@ -83,8 +83,24 @@ def makeWebhookResult(req):
     unitaddress=str(address[zone])
     unithost=str(host[zone])
     unithostreach=str(hostreach[zone])
-    unithomeament=str(homeament[zone])
     unitresortament=str(resortament[zone])
+        
+    unithomeament1=str(homeament1[zone])
+    unithomeament2=str(homeament2[zone])
+    unithomeament3=str(homeament3[zone])
+    unithomeament4=str(homeament4[zone])
+    unithomeament5=str(homeament5[zone])
+        
+    #unitresortament1=str(resortament1[zone])
+    #unitresortament2=str(resortament2[zone])
+    #unitresortament3=str(resortament3[zone])
+    #unitresortament4=str(resortament4[zone])
+    #unitresortament5=str(resortament5[zone])
+    #unitresortament6=str(resortament6[zone])
+    #unitresortament7=str(resortament7[zone])
+    #unitresortament8=str(resortament8[zone])
+    #unitresortament9=str(resortament9[zone])
+    #unitresortament10=str(resortament10[zone])
 
     if req.get("result").get("action") == "unit-name":
         speech="Welcome" 
