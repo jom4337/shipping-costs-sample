@@ -99,7 +99,7 @@ def makeWebhookResult(req):
         unit=zone+"-"+wht
         homeament=str(cost[zone])
         
-        speech="Welcome "+unit+" - "+homeament
+        speech="Welcome "+homeament
         
         return {
         "speech": speech,
