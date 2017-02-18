@@ -27,7 +27,7 @@ def webhook():
     r.headers['Content-Type'] = 'application/json'
     return r
 
-#------------DETAIL----------------------#
+
 cost =     {'ie4d':'Island Echo 4 D', 
             'ie2a':'Island Echo 2 A' }
 wifi =     {'ie4d':'Connect to any network that starts with IES4',
@@ -48,26 +48,7 @@ homeament= {'ie4d':'Sorry, Your host has not shared that information with me yet
             'ie2a':'Wifi, HBO, Beach Chairs & Umbrella, and Beach Toys.'}
 resortament= {'ie4d':'Beachfront Pool, Outdoor Grills, DVD Rentals, Beach Rentals, Beach Volleyball, Fitness Center, Tennis Court, Free Onsite Parking',           
              'ie2a':'Sorry, Your host has not shared that information with me yet.'}
-#------------Home Ameneties Detail----------------------#
-homeament1 =     {'ie4d':'Wifi', 
-                      'ie2a':'' }
-homeament2 =     {'ie4d':'HBO', 
-                      'ie2a':'' }
-homeament3 =     {'ie4d':'Beach Chairs', 
-                      'ie2a':'' }
-homeament4 =     {'ie4d':'Beach Toys', 
-                      'ie2a':'Island Echo 2 A' }
-homeament5 =     {'ie4d':'', 
-                      'ie2a':'Island Echo 2 A' }
-#------------Home Ameneties Detail----------------------#
-#------------Home Ameneties more Detail----------------------#
-morehomeament =     {'ie4d-wifi':'Availble in the unit and throughout the building', 
-                     'ie4d-hbo':'Avaialble in both the licing room and the bedroom', 
-                     'ie4d-chairs':'Beach Chairs & Umbrella are stored on the balcony  They are there for all Guests to use', 
-                     'ie4d-toys':'Stored on the balcony in a plastic bin  They are there for all Guests to use',
-                     'ie2a-toys':'Stored on the balcony '
-                     }
-#------------Home Ameneties more Detail----------------------#
+
     
 def makeWebhookResult(req):
     
@@ -83,9 +64,8 @@ def makeWebhookResult(req):
     unitaddress=str(address[zone])
     unithost=str(host[zone])
     unithostreach=str(hostreach[zone])
+    unithomeament=str(homeament[zone])
     unitresortament=str(resortament[zone])
-
-    
 
     if req.get("result").get("action") == "unit-name":
         speech="Welcome" 
@@ -110,11 +90,12 @@ def makeWebhookResult(req):
         "source": "lodgekit-stay"
         }
     
+    #speech="Welcome to "+unit+" ."+"  I am Leelu, how can I help.  For example. say - wifi, or contact host, or address, or checkout"
+
         
     print("Response:")
     print(speech)
     
-
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
