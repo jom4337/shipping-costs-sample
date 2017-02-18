@@ -27,7 +27,7 @@ def webhook():
     r.headers['Content-Type'] = 'application/json'
     return r
 
-
+#------------DETAIL----------------------#
 cost =     {'ie4d':'Island Echo 4 D', 
             'ie2a':'Island Echo 2 A' }
 wifi =     {'ie4d':'Connect to any network that starts with IES4',
@@ -50,8 +50,23 @@ resortament= {'ie4d':'Beachfront Pool, Outdoor Grills, DVD Rentals, Beach Rental
              'ie2a':'Sorry, Your host has not shared that information with me yet.'}
 #concierg= {'ie4d':'12345',           'ie2a':'67890'}
 #services= {'ie4d':'12345',           'ie2a':'67890'}
+#------------DETAIL----------------------#
+
+#------------Resort Ameneties Detail----------------------#
+#------------Resort Ameneties Detail----------------------#
+
+#------------Home Ameneties Detail----------------------#
+#------------Home Ameneties Detail----------------------#
 
 
+#------------Unit Detail----------------------#
+det1 =     {'ie4d':'Island Echo 4 D', 
+            'ie2a':'Island Echo 2 A' }
+det2 =     {'ie4d':'Island Echo 4 D', 
+            'ie2a':'Island Echo 2 A' }
+det3 =     {'ie4d':'Island Echo 4 D', 
+            'ie2a':'Island Echo 2 A' }
+#------------Unit Detail----------------------#
     
 def makeWebhookResult(req):
     
