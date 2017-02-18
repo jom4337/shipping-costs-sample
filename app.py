@@ -95,7 +95,7 @@ def makeWebhookResult(req):
         unit=zone+"-"+wht
         homeament=str(morehomeament[unit])
         
-        speech="Welcome "+unit+"-"+homeament
+        speech="Sure, Here is more detail for "+unit+" for "+homeament
         
         return {
         "speech": speech,
