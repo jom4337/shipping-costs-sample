@@ -44,10 +44,6 @@ host= {'ie4d':'The Host for this home is Irina',
        'ie2a':'The Host for this home is Irina'}
 hostreach= {'ie4d':'You can reach your Host at 850-253-7008',           
             'ie2a':'You can reach your Host at 850-253-7008'}
-
-#------------Resort Ameneties Detail----------------------#
-#------------Resort Ameneties Detail----------------------#
-
 #------------Home Ameneties Detail----------------------#
 homeament1 =     {'ie4d':'Wifi', 
                       'ie2a':'' }
@@ -60,30 +56,6 @@ homeament4 =     {'ie4d':'Beach Toys',
 homeament5 =     {'ie4d':'', 
                       'ie2a':'Island Echo 2 A' }
 #------------Home Ameneties Detail----------------------#
-#------------Resort Ameneties Detail----------------------#
-resortament1 =     {'ie4d':'Pool', 
-                      'ie2a':'' }
-resortament2 =     {'ie4d':'Grills', 
-                      'ie2a':'' }
-resortament3 =     {'ie4d':'DVD Rentals', 
-                      'ie2a':'' }
-resortament4 =     {'ie4d':'Fitness', 
-                      'ie2a':'' }
-resortament5 =     {'ie4d':'Tennis', 
-                      'ie2a':'' }
-resortament6 =     {'ie4d':'Beach Service', 
-                      'ie2a':'' }
-resortament7 =     {'ie4d':'Parking', 
-                      'ie2a':'' }
-resortament8 =     {'ie4d':'', 
-                      'ie2a':'' }
-resortament9 =     {'ie4d':'', 
-                      'ie2a':'' }
-resortament10 =     {'ie4d':'', 
-                      'ie2a':'' }
-#------------Home Ameneties Detail----------------------#
-
-
 #------------Home Ameneties more Detail----------------------#
 morehomeament =     {'ie4d-wifi':'Availble in the unit and throughout the building', 
                      'ie4d-hbo':'Avaialble in both the licing room and the bedroom', 
@@ -92,17 +64,6 @@ morehomeament =     {'ie4d-wifi':'Availble in the unit and throughout the buildi
                      'ie2a-toys':'Stored on the balcony '
                      }
 #------------Home Ameneties more Detail----------------------#
-
-#------------Resort Ameneties more Detail----------------------#
-moreresortament =   {'ie4d-wifi':'Availble in the unit and throughout the building', 
-                     'ie4d-hbo':'Avaialble in both the licing room and the bedroom', 
-                     'ie4d-chairs':'Beach Chairs & Umbrella are stored on the balcony  They are there for all Guests to use', 
-                     'ie4d-toys':'Stored on the balcony in a plastic bin  They are there for all Guests to use',
-                     'ie2a-toys':'Stored on the balcony '
-                     }
-#------------Resort Ameneties more Detail----------------------#
-
-
 
 def makeWebhookResult(req):
     
