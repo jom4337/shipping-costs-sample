@@ -27,7 +27,7 @@ def webhook():
     r.headers['Content-Type'] = 'application/json'
     return r
 
-
+#------------DETAIL----------------------#
 cost =     {'ie4d':'Island Echo 4 D', 
             'ie2a':'Island Echo 2 A' }
 wifi =     {'ie4d':'Connect to any network that starts with IES4',
@@ -38,8 +38,8 @@ checkout= {'ie4d':'Please, Leave dirty linens in front of bathroom sink. - Load 
            'ie2a':'10:00 AM'}
 checkoutt= {'ie4d':'Checkout time for this home is 10:00 AM',
             'ie2a':'Checkout time for this home is 10:00 AM'}
-address= {'ie4d':'676 Santa Rosa Boulevard, unit 4 D.  Fort walton Beach Fl 32548',           
-          'ie2a':'676 Santa Rosa Boulevard, unit 4 D.  Fort walton Beach Fl 32548'}
+address= {'ie4d':'676 Santa Rosa Boulevard, unit 4 D.  Fort Walton Beach Fl 32548. Guests can receive packages only. Please go to front desk to retrieve.',           
+          'ie2a':'676 Santa Rosa Boulevard, unit 4 D.  Fort Walton Beach Fl 32548. Guests can receive packages only. Please go to front desk to retrieve.'}
 host= {'ie4d':'The Host for this home is Irina',           
        'ie2a':'The Host for this home is Irina'}
 hostreach= {'ie4d':'You can reach your Host at 850-253-7008',           
@@ -48,6 +48,26 @@ homeament= {'ie4d':'Sorry, Your host has not shared that information with me yet
             'ie2a':'Wifi, HBO, Beach Chairs & Umbrella, and Beach Toys.'}
 resortament= {'ie4d':'Beachfront Pool, Outdoor Grills, DVD Rentals, Beach Rentals, Beach Volleyball, Fitness Center, Tennis Court, Free Onsite Parking',           
              'ie2a':'Sorry, Your host has not shared that information with me yet.'}
+#------------Home Ameneties Detail----------------------#
+homeament1 =     {'ie4d':'Wifi', 
+                      'ie2a':'' }
+homeament2 =     {'ie4d':'HBO', 
+                      'ie2a':'' }
+homeament3 =     {'ie4d':'Beach Chairs', 
+                      'ie2a':'' }
+homeament4 =     {'ie4d':'Beach Toys', 
+                      'ie2a':'Island Echo 2 A' }
+homeament5 =     {'ie4d':'', 
+                      'ie2a':'Island Echo 2 A' }
+#------------Home Ameneties Detail----------------------#
+#------------Home Ameneties more Detail----------------------#
+morehomeament =     {'ie4d-wifi':'Availble in the unit and throughout the building', 
+                     'ie4d-hbo':'Avaialble in both the licing room and the bedroom', 
+                     'ie4d-chairs':'Beach Chairs & Umbrella are stored on the balcony  They are there for all Guests to use', 
+                     'ie4d-toys':'Stored on the balcony in a plastic bin  They are there for all Guests to use',
+                     'ie2a-toys':'Stored on the balcony '
+                     }
+#------------Home Ameneties more Detail----------------------#
 
     
 def makeWebhookResult(req):
