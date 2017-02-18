@@ -116,29 +116,8 @@ def makeWebhookResult(req):
     unithomeament=str(homeament[zone])
     unitresortament=str(resortament[zone])
 
-    #-----------------homeament.detail--------------#
-
-    if req.get("result").get("action") == "homeament.detail":
-        
-        result = req.get("result")
-        parameters = result.get("parameters")
-        zone = parameters.get("unit-name")
-        wht = parameters.get("home_amenity")
-        
-        unit=zone+"-"+wht
-        homeament=str(morehomeament[unit])
-        
-        speech="Sure, Here is more detail for "+zone+" "+wht+" - "+homeament
-        
-        return {
-        "speech": speech,
-        "displayText": speech,
-        #"data": {},
-        # "contextOut": [],
-        "source": "apiai-onlinestore-shipping"
-        }
-    
-    #-----------------unit.name------------------------#        
+    if req.get("result").get("action") == "unit-name":
+        speech="Welcome" 
     if req.get("result").get("action") == "unit.name":
         speech="Welcome to "+unit+" ."+"  I am Leelu, how can I help.  For example. say - wifi, or contact host, or address, or checkout"
         return {
