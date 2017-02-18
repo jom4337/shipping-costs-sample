@@ -38,12 +38,16 @@ checkout= {'ie4d':'Please, Leave dirty linens in front of bathroom sink. - Load 
            'ie2a':'10:00 AM'}
 checkoutt= {'ie4d':'Checkout time for this home is 10:00 AM',
             'ie2a':'Checkout time for this home is 10:00 AM'}
-address= {'ie4d':'676 Santa Rosa Boulevard, unit 4 D.  Fort Walton Beach Fl 32548. Guests can receive packages only. Please go to front desk to retrieve.',           
-          'ie2a':'676 Santa Rosa Boulevard, unit 4 D.  Fort Walton Beach Fl 32548. Guests can receive packages only. Please go to front desk to retrieve.'}
+address= {'ie4d':'676 Santa Rosa Boulevard, unit 4 D.  Fort walton Beach Fl 32548',           
+          'ie2a':'676 Santa Rosa Boulevard, unit 4 D.  Fort walton Beach Fl 32548'}
 host= {'ie4d':'The Host for this home is Irina',           
        'ie2a':'The Host for this home is Irina'}
 hostreach= {'ie4d':'You can reach your Host at 850-253-7008',           
             'ie2a':'You can reach your Host at 850-253-7008'}
+homeament= {'ie4d':'Sorry, Your host has not shared that information with me yet.',
+            'ie2a':'Wifi, HBO, Beach Chairs & Umbrella, and Beach Toys.'}
+resortament= {'ie4d':'Beachfront Pool, Outdoor Grills, DVD Rentals, Beach Rentals, Beach Volleyball, Fitness Center, Tennis Court, Free Onsite Parking',           
+             'ie2a':'Sorry, Your host has not shared that information with me yet.'}
 #------------Home Ameneties Detail----------------------#
 homeament1 =     {'ie4d':'Wifi', 
                       'ie2a':'' }
@@ -64,59 +68,28 @@ morehomeament =     {'ie4d-wifi':'Availble in the unit and throughout the buildi
                      'ie2a-toys':'Stored on the balcony '
                      }
 #------------Home Ameneties more Detail----------------------#
-
+    
 def makeWebhookResult(req):
     
-    #result = req.get("result")
-    #parameters = result.get("parameters")
-    #zone = parameters.get("unit-name")
+    result = req.get("result")
+    parameters = result.get("parameters")
+    zone = parameters.get("unit-name")
 
+    unit        =str(cost[zone])
+    unitwifi    =str(wifi[zone])
+    unitwifipass=str(wifipass[zone])
+    unitcheckout=str(checkout[zone])
+    unitcheckoutt=str(checkoutt[zone])
+    unitaddress=str(address[zone])
+    unithost=str(host[zone])
+    unithostreach=str(hostreach[zone])
+    unithomeament=str(homeament[zone])
+    unitresortament=str(resortament[zone])
 
-    if req.get("result").get("action") == "homeament.detail":
-        
-        result = req.get("result")
-        parameters = result.get("parameters")
-        zone = parameters.get("unit-name")
-        wht = parameters.get("home_amenity")
-        
-        unit=zone+"-"+wht
-        homeament=str(morehomeament[unit])
-        
-        speech="Sure, Here is more detail for "+zone+" "+wht+" - "+homeament
-        
-        return {
-        "speech": speech,
-        "displayText": speech,
-        #"data": {},
-        # "contextOut": [],
-        "source": "apiai-onlinestore-shipping"
-        }
-     
+    if req.get("result").get("action") == "unit-name":
+        speech="Welcome" 
     if req.get("result").get("action") == "unit.name":
-        
-        result = req.get("result")
-        parameters = result.get("parameters")
-        zone = parameters.get("unit-name")
-        
-        
-        unit        =str(cost[zone])
-        unitwifi    =str(wifi[zone])
-        unitwifipass=str(wifipass[zone])
-        unitcheckout=str(checkout[zone])
-        unitcheckoutt=str(checkoutt[zone])
-        unitaddress=str(address[zone])
-        unithost=str(host[zone])
-        unithostreach=str(hostreach[zone])
-        unitresortament=str(resortament[zone])
-        
-        unithomeament1=str(homeament1[zone])
-        unithomeament2=str(homeament2[zone])
-        unithomeament3=str(homeament3[zone])
-        unithomeament4=str(homeament4[zone])
-        unithomeament5=str(homeament5[zone])        
-        
         speech="Welcome to "+unit+" ."+"  I am Leelu, how can I help.  For example. say - wifi, or contact host, or address, or checkout"
-        
         return {
         "speech": speech,
         "displayText": speech,
@@ -130,13 +103,19 @@ def makeWebhookResult(req):
                                                                        "address":unitaddress,
                                                                        "host":unithost,
                                                                        "hostreach":unithostreach,
-                                                                       "homeament":unithomeament1+" - "+unithomeament2+" - "+unithomeament3+" - "+unithomeament4+" - "+unithomeament5
+                                                                       "homeament":unithomeament,
+                                                                       "resortament":unitresortament
                                                                       }}],
         "source": "lodgekit-stay"
         }
     
+    #speech="Welcome to "+unit+" ."+"  I am Leelu, how can I help.  For example. say - wifi, or contact host, or address, or checkout"
+
+        
     print("Response:")
     print(speech)
+    
+
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
