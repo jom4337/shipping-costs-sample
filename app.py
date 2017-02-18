@@ -78,26 +78,9 @@ def makeWebhookResult(req):
     print(speech)
     
     if req.get("result").get("action") != "unit.name":
-    return {
-        "speech": speech,
-        "displayText": speech,
-        #"data": {},
-        # "contextOut": [],
-        "contextOut":[{"name":"unit-detail","lifespan":5,"parameters":{"name":unit,
-                                                                       "wifi":unitwifi,
-                                                                       "wifipass":unitwifipass,
-                                                                       "checkout":unitcheckout,
-                                                                       "checkoutt":unitcheckoutt,
-                                                                       "address":unitaddress,
-                                                                       "host":unithost,
-                                                                       "hostreach":unithostreach,
-                                                                       "homeament":unithomeament,
-                                                                       "resortament":unitresortament
-                                                                      }}],
-        "source": "lodgekit-stay"
-    }
+        return {}
     
-    return {
+        return {
         "speech": speech,
         "displayText": speech,
         #"data": {},
