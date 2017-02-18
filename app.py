@@ -71,10 +71,11 @@ def makeWebhookResult(req):
     unitresortament=str(resortament[zone])
 
     if req.get("result").get("action") != "unit-name":
-        return {}    
+        #return {}    
         speech="ok"
     #speech="Welcome to "+unit+" ."+"  I am Leelu, how can I help.  For example. say - wifi, or contact host, or address, or checkout"
-    
+    else:
+        speech"not ok"
     
     print("Response:")
     print(speech)
