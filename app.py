@@ -77,8 +77,8 @@ def makeWebhookResult(req):
     print("Response:")
     print(speech)
     
-    if req.get("result").get("action") != "unit.name":
-        return {} 
+    if req.get("result").get("action") == "unit.name":
+       
     
     return {
         "speech": speech,
@@ -99,6 +99,7 @@ def makeWebhookResult(req):
         "source": "lodgekit-stay"
     }
 
+ return {} 
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
