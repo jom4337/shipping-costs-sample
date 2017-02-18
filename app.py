@@ -55,7 +55,7 @@ resortament= {'ie4d':'Beachfront Pool, Outdoor Grills, DVD Rentals, Beach Rental
     
 def makeWebhookResult(req):
     if req.get("result").get("action") != "unit.name":
-        return {}
+        
     
     result = req.get("result")
     parameters = result.get("parameters")
@@ -97,6 +97,7 @@ def makeWebhookResult(req):
         "source": "lodgekit-stay"
     }
 
+return {}
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
