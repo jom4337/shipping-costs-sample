@@ -54,7 +54,8 @@ resortament= {'ie4d':'Beachfront Pool, Outdoor Grills, DVD Rentals, Beach Rental
 
     
 def makeWebhookResult(req):
-       
+    if req.get("result").get("action") = "shipping.cost":
+        return {}
     
     result = req.get("result")
     parameters = result.get("parameters")
@@ -96,16 +97,6 @@ def makeWebhookResult(req):
                                                                       }}],
         "source": "lodgekit-stay"
     }
-
-
-if var == 200:
-    print "1 - Got a true expression value"
-elif var == 150:
-    print "2 - Got a true expression value"
-elif var == 100:
-    print "3 - Got a true expression value"
-else:
-    print "4 - Got a false expression value"
 
 
 if __name__ == '__main__':
