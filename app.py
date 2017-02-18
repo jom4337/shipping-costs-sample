@@ -76,7 +76,7 @@ def makeWebhookResult(req):
 
 
 
-    if req.get("result").get("action") == "more.homeament":
+    if req.get("result").get("action") == "homeament.detail":
         
         result = req.get("result")
         parameters = result.get("parameters")
