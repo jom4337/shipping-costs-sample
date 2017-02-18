@@ -44,11 +44,6 @@ host= {'ie4d':'The Host for this home is Irina',
        'ie2a':'The Host for this home is Irina'}
 hostreach= {'ie4d':'You can reach your Host at 850-253-7008',           
             'ie2a':'You can reach your Host at 850-253-7008'}
-#resortament= {'ie4d':'Beachfront Pool, Outdoor Grills, DVD Rentals, Beach Rentals, Beach Volleyball, Fitness Center, Tennis Court, Free Onsite Parking',           
-#             'ie2a':'Sorry, Your host has not shared that information with me yet.'}
-#concierg= {'ie4d':'12345',           'ie2a':'67890'}
-#services= {'ie4d':'12345',           'ie2a':'67890'}
-#------------DETAIL----------------------#
 
 #------------Resort Ameneties Detail----------------------#
 #------------Resort Ameneties Detail----------------------#
@@ -99,7 +94,7 @@ morehomeament =     {'ie4d-wifi':'Availble in the unit and throughout the buildi
 #------------Home Ameneties more Detail----------------------#
 
 #------------Resort Ameneties more Detail----------------------#
-moreresortament =     {'ie4d-wifi':'Availble in the unit and throughout the building', 
+moreresortament =   {'ie4d-wifi':'Availble in the unit and throughout the building', 
                      'ie4d-hbo':'Avaialble in both the licing room and the bedroom', 
                      'ie4d-chairs':'Beach Chairs & Umbrella are stored on the balcony  They are there for all Guests to use', 
                      'ie4d-toys':'Stored on the balcony in a plastic bin  They are there for all Guests to use',
@@ -162,16 +157,16 @@ def makeWebhookResult(req):
         unithomeament4=str(homeament4[zone])
         unithomeament5=str(homeament5[zone])
         
-        unitresortament1=str(resortament1[zone])
-        unitresortament2=str(resortament2[zone])
-        unitresortament3=str(resortament3[zone])
-        unitresortament4=str(resortament4[zone])
-        unitresortament5=str(resortament5[zone])
-        unitresortament6=str(resortament6[zone])
-        unitresortament7=str(resortament7[zone])
-        unitresortament8=str(resortament8[zone])
-        unitresortament9=str(resortament9[zone])
-        unitresortament10=str(resortament10[zone])
+        #unitresortament1=str(resortament1[zone])
+        #unitresortament2=str(resortament2[zone])
+        #unitresortament3=str(resortament3[zone])
+        #unitresortament4=str(resortament4[zone])
+        #unitresortament5=str(resortament5[zone])
+        #unitresortament6=str(resortament6[zone])
+        #unitresortament7=str(resortament7[zone])
+        #unitresortament8=str(resortament8[zone])
+        #unitresortament9=str(resortament9[zone])
+        #unitresortament10=str(resortament10[zone])
         
         
         speech="Welcome to "+unit+" ."+"  I am Leelu, how can I help.  For example. say - wifi, or contact host, or address, or checkout"
