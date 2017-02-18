@@ -96,9 +96,6 @@ def makeWebhookResult(req):
         "source": "lodgekit-stay"
     }
 
-else:
-return {}
-
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
