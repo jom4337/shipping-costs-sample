@@ -185,7 +185,6 @@ def makeWebhookResult(req):
                                                                        "host":unithost,
                                                                        "hostreach":unithostreach,
                                                                        "homeament":unithomeament1+" - "+unithomeament2+" - "+unithomeament3+" - "+unithomeament4+" - "+unithomeament5
-                                                                       
                                                                       }}],
         "source": "lodgekit-stay"
         }
