@@ -109,8 +109,6 @@ def makeWebhookResult(req):
         "source": "lodgekit-stay"
         }
     
-    #speech="Welcome to "+unit+" ."+"  I am Leelu, how can I help.  For example. say - wifi, or contact host, or address, or checkout"
-
         
     print("Response:")
     print(speech)
