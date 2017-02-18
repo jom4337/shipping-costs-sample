@@ -54,7 +54,7 @@ resortament= {'ie4d':'Beachfront Pool, Outdoor Grills, DVD Rentals, Beach Rental
 
     
 def makeWebhookResult(req):
-    if req.get("result").get("action") = "unit.name":
+    if req.get("result").get("action") != "unit.name":
         return {}
     result = req.get("result")
     parameters = result.get("parameters")
