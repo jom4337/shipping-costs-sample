@@ -27,8 +27,7 @@ def webhook():
     r.headers['Content-Type'] = 'application/json'
     return r
 
-
-#------------Home DETAIL----------------------#
+#------------DETAIL----------------------#
 cost =     {'ie4d':'Island Echo 4 D', 
             'ie2a':'Island Echo 2 A' }
 wifi =     {'ie4d':'Connect to any network that starts with IES4',
@@ -45,7 +44,6 @@ host= {'ie4d':'The Host for this home is Irina',
        'ie2a':'The Host for this home is Irina'}
 hostreach= {'ie4d':'You can reach your Host at 850-253-7008',           
             'ie2a':'You can reach your Host at 850-253-7008'}
-#------------Home DETAIL----------------------#
 #------------Home Ameneties Detail----------------------#
 homeament1 =     {'ie4d':'Wifi', 
                       'ie2a':'' }
@@ -65,31 +63,71 @@ morehomeament =     {'ie4d-wifi':'Availble in the unit and throughout the buildi
                      'ie4d-toys':'Stored on the balcony in a plastic bin  They are there for all Guests to use',
                      'ie2a-toys':'Stored on the balcony '
                      }
-#------------Home Ameneties more Detail----------------------#    
+#------------Home Ameneties more Detail----------------------#
 
 def makeWebhookResult(req):
     
-    
-    unit        =str(cost[zone])
-    unitwifi    =str(wifi[zone])
-    unitwifipass=str(wifipass[zone])
-    unitcheckout=str(checkout[zone])
-    unitcheckoutt=str(checkoutt[zone])
-    unitaddress=str(address[zone])
-    unithost=str(host[zone])
-    unithostreach=str(hostreach[zone])
-    unithomeament=str(homeament[zone])
-    unitresortament=str(resortament[zone])
-#------------------action-------------------------------#
-    if req.get("result").get("action") == "unit-name":
-        speech="Welcome" 
+    #result = req.get("result")
+    #parameters = result.get("parameters")
+    #zone = parameters.get("unit-name")
+
+
+#-----------------homeament.detail--------------#
+
+    if req.get("result").get("action") == "homeament.detail":
         
-#----------------acion unit.name------------------------#              
+        result = req.get("result")
+        parameters = result.get("parameters")
+        zone = parameters.get("unit-name")
+        wht = parameters.get("home_amenity")
+        
+        unit=zone+"-"+wht
+        homeament=str(morehomeament[unit])
+        
+        speech="Sure, Here is more detail for "+zone+" "+wht+" - "+homeament
+        
+        return {
+        "speech": speech,
+        "displayText": speech,
+        #"data": {},
+        # "contextOut": [],
+        "source": "apiai-onlinestore-shipping"
+        }
+
+#-----------------unit.name------------------------#      
     if req.get("result").get("action") == "unit.name":
         
         result = req.get("result")
         parameters = result.get("parameters")
         zone = parameters.get("unit-name")
+        
+        
+        unit        =str(cost[zone])
+        unitwifi    =str(wifi[zone])
+        unitwifipass=str(wifipass[zone])
+        unitcheckout=str(checkout[zone])
+        unitcheckoutt=str(checkoutt[zone])
+        unitaddress=str(address[zone])
+        unithost=str(host[zone])
+        unithostreach=str(hostreach[zone])
+        unitresortament=str(resortament[zone])
+        
+        unithomeament1=str(homeament1[zone])
+        unithomeament2=str(homeament2[zone])
+        unithomeament3=str(homeament3[zone])
+        unithomeament4=str(homeament4[zone])
+        unithomeament5=str(homeament5[zone])
+        
+        #unitresortament1=str(resortament1[zone])
+        #unitresortament2=str(resortament2[zone])
+        #unitresortament3=str(resortament3[zone])
+        #unitresortament4=str(resortament4[zone])
+        #unitresortament5=str(resortament5[zone])
+        #unitresortament6=str(resortament6[zone])
+        #unitresortament7=str(resortament7[zone])
+        #unitresortament8=str(resortament8[zone])
+        #unitresortament9=str(resortament9[zone])
+        #unitresortament10=str(resortament10[zone])
         
         
         speech="Welcome to "+unit+" ."+"  I am Leelu, how can I help.  For example. say - wifi, or contact host, or address, or checkout"
@@ -107,18 +145,14 @@ def makeWebhookResult(req):
                                                                        "address":unitaddress,
                                                                        "host":unithost,
                                                                        "hostreach":unithostreach,
-                                                                       "homeament":unithomeament,
-                                                                       "resortament":unitresortament
+                                                                       "homeament":unithomeament1+" - "+unithomeament2+" - "+unithomeament3+" - "+unithomeament4+" - "+unithomeament5
                                                                       }}],
         "source": "lodgekit-stay"
         }
-    
-    #speech="Welcome to "+unit+" ."+"  I am Leelu, how can I help.  For example. say - wifi, or contact host, or address, or checkout"
+#-----------------unit.name------------------------#     
 
-        
     print("Response:")
     print(speech)
-    
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
