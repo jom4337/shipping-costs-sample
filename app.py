@@ -44,10 +44,8 @@ host= {'ie4d':'The Host for this home is Irina',
        'ie2a':'The Host for this home is Irina'}
 hostreach= {'ie4d':'You can reach your Host at 850-253-7008',           
             'ie2a':'You can reach your Host at 850-253-7008'}
-#homeament= {'ie4d':'Sorry, Your host has not shared that information with me yet.',
-#            'ie2a':'Wifi, HBO, Beach Chairs & Umbrella, and Beach Toys.'}
-resortament= {'ie4d':'Beachfront Pool, Outdoor Grills, DVD Rentals, Beach Rentals, Beach Volleyball, Fitness Center, Tennis Court, Free Onsite Parking',           
-             'ie2a':'Sorry, Your host has not shared that information with me yet.'}
+#resortament= {'ie4d':'Beachfront Pool, Outdoor Grills, DVD Rentals, Beach Rentals, Beach Volleyball, Fitness Center, Tennis Court, Free Onsite Parking',           
+#             'ie2a':'Sorry, Your host has not shared that information with me yet.'}
 #concierg= {'ie4d':'12345',           'ie2a':'67890'}
 #services= {'ie4d':'12345',           'ie2a':'67890'}
 #------------DETAIL----------------------#
@@ -67,6 +65,30 @@ homeament4 =     {'ie4d':'Beach Toys',
 homeament5 =     {'ie4d':'', 
                       'ie2a':'Island Echo 2 A' }
 #------------Home Ameneties Detail----------------------#
+#------------Resort Ameneties Detail----------------------#
+resortament1 =     {'ie4d':'Pool', 
+                      'ie2a':'' }
+resortament2 =     {'ie4d':'Grills', 
+                      'ie2a':'' }
+resortament3 =     {'ie4d':'DVD Rentals', 
+                      'ie2a':'' }
+resortament4 =     {'ie4d':'Fitness', 
+                      'ie2a':'' }
+resortament5 =     {'ie4d':'Tennis', 
+                      'ie2a':'' }
+resortament6 =     {'ie4d':'Beach Service', 
+                      'ie2a':'' }
+resortament7 =     {'ie4d':'Parking', 
+                      'ie2a':'' }
+resortament8 =     {'ie4d':'', 
+                      'ie2a':'' }
+resortament9 =     {'ie4d':'', 
+                      'ie2a':'' }
+resortament10 =     {'ie4d':'', 
+                      'ie2a':'' }
+#------------Home Ameneties Detail----------------------#
+
+
 #------------Home Ameneties more Detail----------------------#
 morehomeament =     {'ie4d-wifi':'Availble in the unit and throughout the building', 
                      'ie4d-hbo':'Avaialble in both the licing room and the bedroom', 
@@ -76,7 +98,17 @@ morehomeament =     {'ie4d-wifi':'Availble in the unit and throughout the buildi
                      }
 #------------Home Ameneties more Detail----------------------#
 
-    
+#------------Resort Ameneties more Detail----------------------#
+moreresortament =     {'ie4d-wifi':'Availble in the unit and throughout the building', 
+                     'ie4d-hbo':'Avaialble in both the licing room and the bedroom', 
+                     'ie4d-chairs':'Beach Chairs & Umbrella are stored on the balcony  They are there for all Guests to use', 
+                     'ie4d-toys':'Stored on the balcony in a plastic bin  They are there for all Guests to use',
+                     'ie2a-toys':'Stored on the balcony '
+                     }
+#------------Resort Ameneties more Detail----------------------#
+
+
+
 def makeWebhookResult(req):
     
     #result = req.get("result")
@@ -84,6 +116,7 @@ def makeWebhookResult(req):
     #zone = parameters.get("unit-name")
 
 
+ #-----------------homeament.detail--------------#
 
     if req.get("result").get("action") == "homeament.detail":
         
@@ -129,6 +162,18 @@ def makeWebhookResult(req):
         unithomeament4=str(homeament4[zone])
         unithomeament5=str(homeament5[zone])
         
+        unitresortament1=str(resortament1[zone])
+        unitresortament2=str(resortament2[zone])
+        unitresortament3=str(resortament3[zone])
+        unitresortament4=str(resortament4[zone])
+        unitresortament5=str(resortament5[zone])
+        unitresortament6=str(resortament6[zone])
+        unitresortament7=str(resortament7[zone])
+        unitresortament8=str(resortament8[zone])
+        unitresortament9=str(resortament9[zone])
+        unitresortament10=str(resortament10[zone])
+        
+        
         speech="Welcome to "+unit+" ."+"  I am Leelu, how can I help.  For example. say - wifi, or contact host, or address, or checkout"
         
         return {
@@ -144,12 +189,7 @@ def makeWebhookResult(req):
                                                                        "address":unitaddress,
                                                                        "host":unithost,
                                                                        "hostreach":unithostreach,
-                                                                       "resortament":unitresortament,
-                                                                       "homeament1":unithomeament1,
-                                                                       "homeament2":unithomeament2,
-                                                                       "homeament3":unithomeament3,
-                                                                       "homeament4":unithomeament4,
-                                                                       "homeament5":unithomeament5,
+                                                                       "resortament":unitresortament1+" - "+unitresortament2+" - "+unitresortament3+" - "+unitresortament4+" - "+unitresortament5+" - "+unitresortament6+" - "+unitresortament7+" - "+unitresortament8+" - "+unitresortament9+" - "+unitresortament10,
                                                                        "homeament":unithomeament1+" - "+unithomeament2+" - "+unithomeament3+" - "+unithomeament4+" - "+unithomeament5
                                                                        
                                                                       }}],
