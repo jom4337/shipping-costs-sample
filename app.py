@@ -77,8 +77,6 @@ def makeWebhookResult(req):
     print("Response:")
     print(speech)
     
-if req.get("result").get("action") != "unit.name":
-        return {} 
     
         return {
         "speech": speech,
