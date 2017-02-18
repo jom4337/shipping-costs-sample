@@ -77,7 +77,21 @@ def makeWebhookResult(req):
 
 
     if req.get("result").get("action") == "more.homeament":
+        
+        result = req.get("result")
+        parameters = result.get("parameters")
+        zone = parameters.get("unit-name")
+        wht = parameters.get("homeament")
+        
         speech="Welcome" 
+        
+        return {
+        "speech": speech,
+        "displayText": speech,
+        #"data": {},
+        # "contextOut": [],
+        "source": "lodgekit-stay"
+        }
   #-----------------unit.name------------------------#      
     if req.get("result").get("action") == "unit.name":
         
