@@ -79,8 +79,9 @@ def makeWebhookResult(req):
     
     if req.get("result").get("action") == "unit.name":
         speech="Welcome to "+unit+" ."+"  I am Leelu, how can I help.  For example. say - wifi, or contact host, or address, or checkout"
-
-    
+    else: 
+         speech="Welcome"
+            
     return {
         "speech": speech,
         "displayText": speech,
