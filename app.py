@@ -67,6 +67,19 @@ homeament4 =     {'ie4d':'Beach Toys',
 homeament5 =     {'ie4d':'', 
                       'ie2a':'Island Echo 2 A' }
 #------------Home Ameneties Detail----------------------#
+#------------Home Ameneties more Detail----------------------#
+morehomeament1 =     {'ie4d':'Wifi', 
+                      'ie2a':'' }
+morehomeament2 =     {'ie4d':'HBO', 
+                      'ie2a':'' }
+morehomeament3 =     {'ie4d':'Beach Chairs & Umbrella', 
+                      'ie2a':'' }
+morehomeament4 =     {'ie4d':'Beach Toys', 
+                      'ie2a':'Island Echo 2 A' }
+morehomeament5 =     {'ie4d':'', 
+                      'ie2a':'Island Echo 2 A' }
+#------------Home Ameneties more Detail----------------------#
+
     
 def makeWebhookResult(req):
     
@@ -83,7 +96,9 @@ def makeWebhookResult(req):
         zone = parameters.get("unit-name")
         wht = parameters.get("homeament")
         
-        speech="Welcome" 
+        unit=zone+"-"+wht
+        
+        speech="Welcome"+unit 
         
         return {
         "speech": speech,
