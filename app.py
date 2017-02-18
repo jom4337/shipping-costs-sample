@@ -70,9 +70,9 @@ homeament5 =     {'ie4d':'',
     
 def makeWebhookResult(req):
     
-    result = req.get("result")
-    parameters = result.get("parameters")
-    zone = parameters.get("unit-name")
+    #result = req.get("result")
+    #parameters = result.get("parameters")
+    #zone = parameters.get("unit-name")
 
 
 
@@ -80,6 +80,12 @@ def makeWebhookResult(req):
         speech="Welcome" 
   #-----------------unit.name------------------------#      
     if req.get("result").get("action") == "unit.name":
+        
+        result = req.get("result")
+        parameters = result.get("parameters")
+        zone = parameters.get("unit-name")
+        
+        
         unit        =str(cost[zone])
         unitwifi    =str(wifi[zone])
         unitwifipass=str(wifipass[zone])
