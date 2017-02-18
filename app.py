@@ -69,10 +69,7 @@ morehomeament =     {'ie4d-wifi':'Availble in the unit and throughout the buildi
 
 def makeWebhookResult(req):
     
-    result = req.get("result")
-    parameters = result.get("parameters")
-    zone = parameters.get("unit-name")
-
+    
     unit        =str(cost[zone])
     unitwifi    =str(wifi[zone])
     unitwifipass=str(wifipass[zone])
@@ -83,11 +80,20 @@ def makeWebhookResult(req):
     unithostreach=str(hostreach[zone])
     unithomeament=str(homeament[zone])
     unitresortament=str(resortament[zone])
-
+#------------------action-------------------------------#
     if req.get("result").get("action") == "unit-name":
         speech="Welcome" 
+        
+#----------------acion unit.name------------------------#              
     if req.get("result").get("action") == "unit.name":
+        
+        result = req.get("result")
+        parameters = result.get("parameters")
+        zone = parameters.get("unit-name")
+        
+        
         speech="Welcome to "+unit+" ."+"  I am Leelu, how can I help.  For example. say - wifi, or contact host, or address, or checkout"
+        
         return {
         "speech": speech,
         "displayText": speech,
