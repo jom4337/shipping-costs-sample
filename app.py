@@ -78,7 +78,7 @@ def makeWebhookResult(req):
     print(speech)
     
     
-        return {
+    return {
         "speech": speech,
         "displayText": speech,
         #"data": {},
