@@ -71,7 +71,8 @@ homeament5 =     {'ie4d':'',
 morehomeament =     {'ie4d-Wifi':'Availble in the unit and throughout the building', 
                      'ie4d-HBO':'Avaialble in both the licing room and the bedroom', 
                      'ie4d-Beach Chairs':'Beach Chairs & Umbrella are stored on the balcony.  They are there for all Guests to use', 
-                     'ie4d-Beach Toys':'Stored on the balcony in a plastic bin.  They are there for all Guests to use'
+                     'ie4d-Beach Toys':'Stored on the balcony in a plastic bin.  They are there for all Guests to use',
+                     'ie2a-Beach Toys':'Stored on the balcony '
                      }
 #------------Home Ameneties more Detail----------------------#
 
@@ -92,9 +93,9 @@ def makeWebhookResult(req):
         wht = parameters.get("homeament")
         
         unit=zone+"-"+wht
-        homeament=str(morehomeament[unit])
+        #homeament=str(morehomeament[unit])
         
-        speech="Welcome "+homeament
+        speech="Welcome "+unit
         
         return {
         "speech": speech,
