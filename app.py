@@ -78,7 +78,11 @@ def makeWebhookResult(req):
     print(speech)
     
     if req.get("result").get("action") != "unit.name":
-        return {}
+    return {"speech": speech,
+        "displayText": speech
+        #"data": {},
+        # "contextOut": [],
+                } 
     
     return {
         "speech": speech,
