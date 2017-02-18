@@ -44,8 +44,8 @@ host= {'ie4d':'The Host for this home is Irina',
        'ie2a':'The Host for this home is Irina'}
 hostreach= {'ie4d':'You can reach your Host at 850-253-7008',           
             'ie2a':'You can reach your Host at 850-253-7008'}
-#homeament= {'ie4d':'Sorry, Your host has not shared that information with me yet.',
-#            'ie2a':'Wifi, HBO, Beach Chairs & Umbrella, and Beach Toys.'}
+homeament= {'ie4d':'Sorry, Your host has not shared that information with me yet.',
+            'ie2a':'Wifi, HBO, Beach Chairs & Umbrella, and Beach Toys.'}
 resortament= {'ie4d':'Beachfront Pool, Outdoor Grills, DVD Rentals, Beach Rentals, Beach Volleyball, Fitness Center, Tennis Court, Free Onsite Parking',           
              'ie2a':'Sorry, Your host has not shared that information with me yet.'}
 #concierg= {'ie4d':'12345',           'ie2a':'67890'}
@@ -66,9 +66,6 @@ unithomeament4 =     {'ie4d':'Beach Toys',
                       'ie2a':'Island Echo 2 A' }
 unithomeament5 =     {'ie4d':'', 
                       'ie2a':'Island Echo 2 A' }
-
-homeament= {'ie4d':unithomeament1,
-            'ie2a':'Wifi, HBO, Beach Chairs & Umbrella, and Beach Toys....'}
 #------------Home Ameneties Detail----------------------#
     
 def makeWebhookResult(req):
