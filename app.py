@@ -90,7 +90,7 @@ def makeWebhookResult(req):
         result = req.get("result")
         parameters = result.get("parameters")
         zone = parameters.get("unit-name")
-        wht = parameters.get("homeament")
+        wht = parameters.get("home_amenity")
         
         unit=zone+"-"+wht
         homeament=str(morehomeament[unit])
