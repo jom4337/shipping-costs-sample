@@ -76,8 +76,9 @@ def makeWebhookResult(req):
 
 
 
-    if req.get("result").get("action") == "unit-name":
+    if req.get("result").get("action") == "more.homeament":
         speech="Welcome" 
+  #-----------------unit.name------------------------#      
     if req.get("result").get("action") == "unit.name":
         unit        =str(cost[zone])
         unitwifi    =str(wifi[zone])
@@ -121,33 +122,10 @@ def makeWebhookResult(req):
                                                                       }}],
         "source": "lodgekit-stay"
         }
-    
-    #speech="Welcome to "+unit+" ."+"  I am Leelu, how can I help.  For example. say - wifi, or contact host, or address, or checkout"
+  #-----------------unit.name------------------------#     
 
-        
     print("Response:")
     print(speech)
-    
-
-    #return {
-    #    "speech": speech,
-    #    "displayText": speech,
-    #    #"data": {},
-    #    # "contextOut": [],
-    #    "contextOut":[{"name":"unit-detail","lifespan":5,"parameters":{"name":unit,
-    #                                                                   "wifi":unitwifi,
-    #                                                                   "wifipass":unitwifipass,
-    #                                                                   "checkout":unitcheckout,
-    #                                                                   "checkoutt":unitcheckoutt,
-    #                                                                   "address":unitaddress,
-    #                                                                   "host":unithost,
-    #                                                                   "hostreach":unithostreach,
-    #                                                                   "homeament":unithomeament,
-    #                                                                   "resortament":unitresortament
-    #                                                                  }}],
-    #    "source": "lodgekit-stay"
-    #}
-
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
