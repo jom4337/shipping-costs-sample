@@ -44,8 +44,8 @@ host= {'ie4d':'The Host for this home is Irina',
        'ie2a':'The Host for this home is Irina'}
 hostreach= {'ie4d':'You can reach your Host at 850-253-7008',           
             'ie2a':'You can reach your Host at 850-253-7008'}
-homeament= {'ie4d':'Sorry, Your host has not shared that information with me yet.',
-            'ie2a':'Wifi, HBO, Beach Chairs & Umbrella, and Beach Toys.'}
+#homeament= {'ie4d':'Sorry, Your host has not shared that information with me yet.',
+#            'ie2a':'Wifi, HBO, Beach Chairs & Umbrella, and Beach Toys.'}
 resortament= {'ie4d':'Beachfront Pool, Outdoor Grills, DVD Rentals, Beach Rentals, Beach Volleyball, Fitness Center, Tennis Court, Free Onsite Parking',           
              'ie2a':'Sorry, Your host has not shared that information with me yet.'}
 #concierg= {'ie4d':'12345',           'ie2a':'67890'}
@@ -56,15 +56,15 @@ resortament= {'ie4d':'Beachfront Pool, Outdoor Grills, DVD Rentals, Beach Rental
 #------------Resort Ameneties Detail----------------------#
 
 #------------Home Ameneties Detail----------------------#
-unithomeament1 =     {'ie4d':'Wifi', 
+homeament1 =     {'ie4d':'Wifi', 
                       'ie2a':'' }
-unithomeament2 =     {'ie4d':'HBO', 
+homeament2 =     {'ie4d':'HBO', 
                       'ie2a':'' }
-unithomeament3 =     {'ie4d':'Beach Chairs & Umbrella', 
+homeament3 =     {'ie4d':'Beach Chairs & Umbrella', 
                       'ie2a':'' }
-unithomeament4 =     {'ie4d':'Beach Toys', 
+homeament4 =     {'ie4d':'Beach Toys', 
                       'ie2a':'Island Echo 2 A' }
-unithomeament5 =     {'ie4d':'', 
+homeament5 =     {'ie4d':'', 
                       'ie2a':'Island Echo 2 A' }
 #------------Home Ameneties Detail----------------------#
     
@@ -87,8 +87,13 @@ def makeWebhookResult(req):
         unitaddress=str(address[zone])
         unithost=str(host[zone])
         unithostreach=str(hostreach[zone])
-        unithomeament=str(homeament[zone])
         unitresortament=str(resortament[zone])
+        
+        unithomeament1=str(homeament1[zone])
+        unithomeament2=str(homeament2[zone])
+        unithomeament3=str(homeament3[zone])
+        unithomeament4=str(homeament4[zone])
+        unithomeament5=str(homeament5[zone])
         
         speech="Welcome to "+unit+" ."+"  I am Leelu, how can I help.  For example. say - wifi, or contact host, or address, or checkout"
         
@@ -105,7 +110,7 @@ def makeWebhookResult(req):
                                                                        "address":unitaddress,
                                                                        "host":unithost,
                                                                        "hostreach":unithostreach,
-                                                                       "homeament":unithomeament,
+                                                                       "homeament":unithomeament1,
                                                                        "resortament":unitresortament
                                                                       }}],
         "source": "lodgekit-stay"
