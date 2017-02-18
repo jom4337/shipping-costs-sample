@@ -73,16 +73,8 @@ def makeWebhookResult(req):
     if req.get("result").get("action") == "unit-name":
         speech="Welcome" 
     if req.get("result").get("action") == "unit.name":
-        speech="welcome"    
-    
-    #speech="Welcome to "+unit+" ."+"  I am Leelu, how can I help.  For example. say - wifi, or contact host, or address, or checkout"
-
-        
-    print("Response:")
-    print(speech)
-    
-
-    return {
+        speech="Welcome to "+unit+" ."+"  I am Leelu, how can I help.  For example. say - wifi, or contact host, or address, or checkout"
+        return {
         "speech": speech,
         "displayText": speech,
         #"data": {},
@@ -99,7 +91,33 @@ def makeWebhookResult(req):
                                                                        "resortament":unitresortament
                                                                       }}],
         "source": "lodgekit-stay"
-    }
+        }
+    
+    #speech="Welcome to "+unit+" ."+"  I am Leelu, how can I help.  For example. say - wifi, or contact host, or address, or checkout"
+
+        
+    print("Response:")
+    print(speech)
+    
+
+    #return {
+    #    "speech": speech,
+    #    "displayText": speech,
+    #    #"data": {},
+    #    # "contextOut": [],
+    #    "contextOut":[{"name":"unit-detail","lifespan":5,"parameters":{"name":unit,
+    #                                                                   "wifi":unitwifi,
+    #                                                                   "wifipass":unitwifipass,
+    #                                                                   "checkout":unitcheckout,
+    #                                                                   "checkoutt":unitcheckoutt,
+    #                                                                   "address":unitaddress,
+    #                                                                   "host":unithost,
+    #                                                                   "hostreach":unithostreach,
+    #                                                                   "homeament":unithomeament,
+    #                                                                   "resortament":unitresortament
+    #                                                                  }}],
+    #    "source": "lodgekit-stay"
+    #}
 
 
 if __name__ == '__main__':
