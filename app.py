@@ -189,7 +189,6 @@ def makeWebhookResult(req):
                                                                        "address":unitaddress,
                                                                        "host":unithost,
                                                                        "hostreach":unithostreach,
-                                                                       "resortament":unitresortament1+" - "+unitresortament2+" - "+unitresortament3+" - "+unitresortament4+" - "+unitresortament5+" - "+unitresortament6+" - "+unitresortament7+" - "+unitresortament8+" - "+unitresortament9+" - "+unitresortament10,
                                                                        "homeament":unithomeament1+" - "+unithomeament2+" - "+unithomeament3+" - "+unithomeament4+" - "+unithomeament5
                                                                        
                                                                       }}],
