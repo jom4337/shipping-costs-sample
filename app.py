@@ -54,8 +54,6 @@ resortament= {'ie4d':'Beachfront Pool, Outdoor Grills, DVD Rentals, Beach Rental
 
     
 def makeWebhookResult(req):
-    if req.get("result").get("action") == "shipping.cost":
-        return {}
     
     result = req.get("result")
     parameters = result.get("parameters")
@@ -71,6 +69,9 @@ def makeWebhookResult(req):
     unithostreach=str(hostreach[zone])
     unithomeament=str(homeament[zone])
     unitresortament=str(resortament[zone])
+
+    if req.get("result").get("action") == "shipping.cost":
+        return {}    
     
     speech="Welcome to "+unit+" ."+"  I am Leelu, how can I help.  For example. say - wifi, or contact host, or address, or checkout"
     
