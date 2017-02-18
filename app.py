@@ -38,8 +38,8 @@ checkout= {'ie4d':'Please, Leave dirty linens in front of bathroom sink. - Load 
            'ie2a':'10:00 AM'}
 checkoutt= {'ie4d':'Checkout time for this home is 10:00 AM',
             'ie2a':'Checkout time for this home is 10:00 AM'}
-address= {'ie4d':'676 Santa Rosa Boulevard, unit 4 D.  Fort walton Beach Fl 32548',           
-          'ie2a':'676 Santa Rosa Boulevard, unit 4 D.  Fort walton Beach Fl 32548'}
+address= {'ie4d':'676 Santa Rosa Boulevard, unit 4 D.  Fort Walton Beach Fl 32548. Guests can receive packages only. Please go to front desk to retrieve.',           
+          'ie2a':'676 Santa Rosa Boulevard, unit 4 D.  Fort Walton Beach Fl 32548. Guests can receive packages only. Please go to front desk to retrieve.'}
 host= {'ie4d':'The Host for this home is Irina',           
        'ie2a':'The Host for this home is Irina'}
 hostreach= {'ie4d':'You can reach your Host at 850-253-7008',           
