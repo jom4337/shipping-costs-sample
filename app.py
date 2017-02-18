@@ -67,7 +67,7 @@ unithomeament4 =     {'ie4d':'Beach Toys',
 unithomeament5 =     {'ie4d':'', 
                       'ie2a':'Island Echo 2 A' }
 
-homeament= {'ie4d':unithomeament1+" - "+unithomeament2+" - "+unithomeament3+" - "+unithomeament4+" - "+unithomeament5+",
+homeament= {'ie4d':unithomeament1,
             'ie2a':'Wifi, HBO, Beach Chairs & Umbrella, and Beach Toys....'}
 #------------Home Ameneties Detail----------------------#
     
