@@ -78,8 +78,6 @@ def makeWebhookResult(req):
     print("Response:")
     print(speech)
     
-  
-    else:
     return {
         "speech": speech,
         "displayText": speech,
