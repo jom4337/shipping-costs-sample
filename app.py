@@ -136,8 +136,7 @@ def makeWebhookResult(req):
         unitaddress=str(address[zone])
         unithost=str(host[zone])
         unithostreach=str(hostreach[zone])
-        #unithomeament=str(homeament[zone])
-        unitresortament=str(resortament[zone])
+        #unitresortament=str(resortament[zone])
         
         unithomeament1=str(homeament1[zone])
         unithomeament2=str(homeament2[zone])
@@ -157,7 +156,8 @@ def makeWebhookResult(req):
         unitresortament8=str(resortament8[zone])
         unitresortament9=str(resortament9[zone])
         unitresortament10=str(resortament10[zone])
-    
+        unitresortament=unitresortament1+" - "+unitresortament2+" - "+unitresortament3+" - "+unitresortament4+" - "+unitresortament5
+        
         speech="Welcome to "+unit+" ."+"  I am Leelu, how can I help.  For example. say - wifi, or contact host, or address, or checkout"
         
         return {
