@@ -101,25 +101,7 @@ moreresortament =   {'ie4d-wifi':'Availble in the unit and throughout the buildi
     
 def makeWebhookResult(req):
     
-    if req.get("result").get("action") == "homeament.detail":
-        
-        result = req.get("result")
-        parameters = result.get("parameters")
-        zone = parameters.get("unit-name")
-        wht = parameters.get("home_amenity")
-        
-        unit=zone+"-"+wht
-        homeament=str(morehomeament[unit])
-        
-        speech="Sure, Here is more detail for "+zone+" "+wht+" - "+homeament
-        
-        return {
-        "speech": speech,
-        "displayText": speech,
-        #"data": {},
-        # "contextOut": [],
-        "source": "apiai-onlinestore-shipping"
-        }
+    
     
     if req.get("result").get("action") == "unit.name":
     
