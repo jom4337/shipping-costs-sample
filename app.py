@@ -110,7 +110,7 @@ def makeWebhookResult(req):
         wht = parameters.get("home_amenity")
         
         unit=zone+"-"+wht
-        #homeament=str(morehomeament[unit])
+        homeamentD=str(morehomeament[unit])
         
         speech="Sure, Here is more detail for "+zone+" "+wht+unit
         
