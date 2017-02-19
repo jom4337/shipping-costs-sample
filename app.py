@@ -111,7 +111,15 @@ def makeWebhookResult(req):
         
         unit=zone+"-"+wht
         
-        speech="Welcome" 
+        speech="Sure, Here is more detail for "+zone+" "+wht
+        
+        return {
+        "speech": speech,
+        "displayText": speech,
+        #"data": {},
+        # "contextOut": [],
+        "source": "apiai-onlinestore-shipping"
+        }
 
     if req.get("result").get("action") == "unit.name":
     
