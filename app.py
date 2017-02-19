@@ -109,7 +109,7 @@ def makeWebhookResult(req):
         zone = parameters.get("unit-name")
         wht = parameters.get("resort_amenity")
         
-        unit=zone+"-"+wht
+        #unit=zone+"-"+wht
         #homeamentresortD=str(moreresortament[unit])
         
         speech="Sure, Here is more detail for "#+zone+" "+wht#+" - "+homeamentD
