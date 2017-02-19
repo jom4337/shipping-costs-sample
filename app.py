@@ -119,7 +119,7 @@ def makeWebhookResult(req):
         "displayText": speech,
         #"data": {},
         # "contextOut": [],
-        "source": "apiai-onlinestore-shipping"
+        "source": "lodgekit-stay"
         }
 
     if req.get("result").get("action") == "unit.name":
