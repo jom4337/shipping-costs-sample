@@ -103,6 +103,12 @@ def makeWebhookResult(req):
     
 
     if req.get("result").get("action") == "homeament.detail":
+        
+        result = req.get("result")
+        parameters = result.get("parameters")
+        zone = parameters.get("unit-name")
+        wht = parameters.get("home_amenity")
+        
         speech="Welcome" 
 
     if req.get("result").get("action") == "unit.name":
