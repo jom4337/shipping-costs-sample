@@ -106,13 +106,13 @@ def makeWebhookResult(req):
         
         result = req.get("result")
         parameters = result.get("parameters")
-        zoner = parameters.get("unit-name")
-        whtr = parameters.get("resort_amenity")
+        zone = parameters.get("unit-name")
+        wht = parameters.get("resort_amenity")
         
-        #unitr=zoner+"-"+whtr
+        unit=zone+"-"+wht
         #homeamentresortD=str(moreresortament[unit])
         
-        speech="Sure, Here is more detail for "#+zoner#+" "+wht#+" - "+homeamentD
+        speech="Sure, Here is more detail for "+zone+" "+wht#+" - "+homeamentD
         
         return {
         "speech": speech,
