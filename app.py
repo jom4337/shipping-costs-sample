@@ -107,8 +107,6 @@ def makeWebhookResult(req):
 
     if req.get("result").get("action") == "homeament.detail":
         
-        if req.get("result").get("action") == "homeament.detail":
-        
         result = req.get("result")
         parameters = result.get("parameters")
         zone = parameters.get("unit-name")
