@@ -144,7 +144,7 @@ def makeWebhookResult(req):
         unithomeament3=str(homeament3[zone])
         unithomeament4=str(homeament4[zone])
         unithomeament5=str(homeament5[zone])
-        unithomeament=unithomeament1+" - "
+        unithomeament=unithomeament1+" - "+unithomeament2+" - "+unithomeament3+" - "+unithomeament4+" - "+unithomeament5
         
         
         unitresortament1=str(resortament1[zone])
