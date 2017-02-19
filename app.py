@@ -107,15 +107,17 @@ def makeWebhookResult(req):
 
     if req.get("result").get("action") == "homeament.detail":
         
+        if req.get("result").get("action") == "homeament.detail":
+        
         result = req.get("result")
         parameters = result.get("parameters")
         zone = parameters.get("unit-name")
         wht = parameters.get("home_amenity")
         
-        #unit=zone+"-"+wht
-        #homeamentD=str(morehomeament[unit])
+        unit=zone+"-"+wht
+        homeamentD=str(morehomeament[unit])
         
-        speech="Sure, Here is more detail for "#+zone+" "+wht+" - "+homeamentD
+        speech="Sure, Here is more detail for "+zone+" "+wht+" - "+homeamentD
         
         return {
         "speech": speech,
