@@ -119,6 +119,12 @@ def makeWebhookResult(req):
         unithostreach=str(hostreach[zone])
         unithomeament=str(homeament[zone])
         unitresortament=str(resortament[zone])
+        
+        unithomeament1=str(homeament1[zone])
+        unithomeament2=str(homeament2[zone])
+        unithomeament3=str(homeament3[zone])
+        unithomeament4=str(homeament4[zone])
+        unithomeament5=str(homeament5[zone])
     
         speech="Welcome to "+unit+" ."+"  I am Leelu, how can I help.  For example. say - wifi, or contact host, or address, or checkout"
         
