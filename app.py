@@ -93,8 +93,10 @@ morehomeament =     {'ie4d-wifi':'Availble in the unit and throughout the buildi
 #------------Resort Ameneties more Detail----------------------#
 moreresortament =   {'ie4d-wifi':'Availble in the unit and throughout the building', 
                      'ie4d-hbo':'Avaialble in both the licing room and the bedroom', 
-                     'ie4d-chairs':'Beach Chairs & Umbrella are stored on the balcony  They are there for all Guests to use', 
-                     'ie4d-toys':'Stored on the balcony in a plastic bin  They are there for all Guests to use',
+                     'ie4d-grills':'Beach Chairs & Umbrella are stored on the balcony  They are there for all Guests to use', 
+                     'ie4d-fitness':'Stored on the balcony in a plastic bin  They are there for all Guests to use',
+                     'ie4d-beach service':'Stored on the balcony in a plastic bin  They are there for all Guests to use',
+                     'ie4d-parking':'Stored on the balcony in a plastic bin  They are there for all Guests to use',
                      'ie2a-toys':'Stored on the balcony '
                      }
 #------------Resort Ameneties more Detail----------------------#
